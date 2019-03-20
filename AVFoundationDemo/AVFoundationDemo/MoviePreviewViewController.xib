@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviePreviewViewController" customModule="AVFoundationDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="previewButton" destination="vZ8-ft-Odx" id="hju-jb-u4g"/>
+                <outlet property="recordButton" destination="dqI-ma-lTS" id="QF1-0M-A4H"/>
+                <outlet property="saveButton" destination="qtL-lp-4sl" id="BKS-Wz-YiP"/>
+                <outlet property="timeLabel" destination="Q07-Un-hDh" id="FAn-DK-Y86"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqI-ma-lTS">
+                    <rect key="frame" x="156.5" y="607" width="62" height="30"/>
+                    <state key="normal" title="开始录制">
+                        <color key="titleColor" red="1" green="0.28776825290678043" blue="0.2940584736021814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="recordAction:" destination="-1" eventType="touchUpInside" id="ek1-dY-0RD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZ8-ft-Odx">
+                    <rect key="frame" x="84.5" y="607" width="62" height="30"/>
+                    <state key="normal" title="预览播放">
+                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="previewAction:" destination="-1" eventType="touchUpInside" id="b6n-eG-bJU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q07-Un-hDh">
+                    <rect key="frame" x="187.5" y="587" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.29816268309999999" blue="0.60960501190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtL-lp-4sl">
+                    <rect key="frame" x="228.5" y="607" width="31" height="30"/>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" red="1" green="0.29816268308521443" blue="0.6096050119390759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="Saz-mw-w27"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dqI-ma-lTS" secondAttribute="bottom" constant="30" id="81B-km-aRp"/>
+                <constraint firstItem="qtL-lp-4sl" firstAttribute="leading" secondItem="dqI-ma-lTS" secondAttribute="trailing" constant="10" id="9N1-Ug-6q9"/>
+                <constraint firstItem="dqI-ma-lTS" firstAttribute="leading" secondItem="vZ8-ft-Odx" secondAttribute="trailing" constant="10" id="G25-e9-vd3"/>
+                <constraint firstItem="dqI-ma-lTS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rky-ca-LGV"/>
+                <constraint firstItem="qtL-lp-4sl" firstAttribute="centerY" secondItem="vZ8-ft-Odx" secondAttribute="centerY" id="Ya0-eC-0nW"/>
+                <constraint firstItem="Q07-Un-hDh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f94-hm-Bc0"/>
+                <constraint firstItem="dqI-ma-lTS" firstAttribute="top" secondItem="Q07-Un-hDh" secondAttribute="bottom" constant="20" id="h8t-gf-OfR"/>
+                <constraint firstItem="qtL-lp-4sl" firstAttribute="centerY" secondItem="vZ8-ft-Odx" secondAttribute="centerY" id="m6Z-dO-jYI"/>
+                <constraint firstItem="dqI-ma-lTS" firstAttribute="centerY" secondItem="vZ8-ft-Odx" secondAttribute="centerY" id="mRD-Qr-BWI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
